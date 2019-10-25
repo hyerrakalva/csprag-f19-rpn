@@ -6,7 +6,12 @@ def calculate(arg):
         if token == '+':
             arg1 = stack.pop()
             arg2 = stack.pop()
-            result = arg1 + arg2
+            result = arg2 + arg1
+            stack.append(result)
+        elif token == '-':
+            arg1 = stack.pop()
+            arg2 = stack.pop()
+            result = arg2 - arg1
             stack.append(result)
         else:
             stack.append(int(token))
